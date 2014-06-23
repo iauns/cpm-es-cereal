@@ -643,7 +643,7 @@ TEST(EntitySystem, DeserializeMerge)
   // verification global values.
 
   // Deserialize merge position
-  core->clearAllComponentContainers();
+  core->clearAllComponentContainersImmediately();
   core->deserializeComponentCreate(root);
   core->renormalize(true);
   sysBasic->walkComponents(*core);
